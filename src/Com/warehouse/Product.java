@@ -1,6 +1,7 @@
 package Com.warehouse;
 
 public class Product {
+	
 	    private String id;
 	    private String name;
 	    private int quantity;
@@ -18,7 +19,10 @@ public class Product {
 	    public int getQuantity() { return quantity; }
 	    public int getThreshold() { return threshold; }
 
-	    public void increaseQuantity(int amount) { if (amount > 0) quantity += amount; }
+	    public void increaseQuantity(int amount) {
+	        if (amount > 0) quantity += amount;
+	    }
+
 	    public boolean decreaseQuantity(int amount) {
 	        if (amount > 0 && quantity >= amount) {
 	            quantity -= amount;
@@ -26,6 +30,8 @@ public class Product {
 	        }
 	        return false;
 	    }
-	}
-	
+}
 
+
+	
+	

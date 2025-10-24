@@ -7,7 +7,7 @@ public class Warehouse {
 	    private Map<String, Product> inventory = new HashMap<>();
 	    private List<AlertService> observers = new ArrayList<>();
 
-	    // Add observer
+	    
 	    public void addObserver(AlertService observer) {
 	        observers.add(observer);
 	    }
@@ -18,7 +18,7 @@ public class Warehouse {
 	        System.out.println("✅ Product added: " + product.getName());
 	    }
 
-	    // Receive shipment
+	    // Receive shipment 
 	    public void receiveShipment(String productId, int amount) {
 	        Product product = inventory.get(productId);
 	        if (product != null) {
@@ -29,7 +29,7 @@ public class Warehouse {
 	        }
 	    }
 
-	    // Fulfill customer order
+	    // Fulfill order
 	    public void fulfillOrder(String productId, int amount) {
 	        Product product = inventory.get(productId);
 	        if (product != null) {
@@ -54,7 +54,7 @@ public class Warehouse {
 	        }
 	    }
 
-	    // View inventory
+	    // Display inventory
 	    public void viewInventory() {
 	        System.out.println("\n📋 Current Inventory:");
 	        for (Product p : inventory.values()) {
